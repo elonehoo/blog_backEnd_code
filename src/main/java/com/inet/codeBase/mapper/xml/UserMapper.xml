@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.codeBase.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.inet.codeBase.beans.User">
+        <id column="user_id" property="userId" />
+        <result column="user_nickname" property="userNickname" />
+        <result column="user_name" property="userName" />
+        <result column="user_password" property="userPassword" />
+        <result column="user_email" property="userEmail" />
+        <result column="user_type" property="userType" />
+        <result column="user_headPortrait" property="userHeadPortrait" />
+        <result column="user_creationTime" property="userCreationTime" />
+        <result column="user_turnoverTime" property="userTurnoverTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, user_nickname, user_name, user_password, user_email, user_type, user_headPortrait, user_creationTime, user_turnoverTime
+    </sql>
+
+</mapper>

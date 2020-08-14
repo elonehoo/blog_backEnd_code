@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: localhost
+    port: 6379
+  session:
+    store-type: redis
+  servlet:
+      multipart:
+        max-file-size: 10MB
+        max-request-size: 100MB
+
+
+
+
+mybatis-plus:
+  type-aliases-package: com.inet.codebase.beans
+  mapper-locations: com/inet/codebase/mapper/xml/*.xml

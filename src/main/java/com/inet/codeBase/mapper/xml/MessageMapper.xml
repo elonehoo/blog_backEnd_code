@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.codeBase.mapper.MessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.inet.codeBase.beans.Message">
+        <id column="message_id" property="messageId" />
+        <result column="message_nickname" property="messageNickname" />
+        <result column="message_email" property="messageEmail" />
+        <result column="message_content" property="messageContent" />
+        <result column="message_headPortrait" property="messageHeadPortrait" />
+        <result column="message_createTime" property="messageCreateTime" />
+        <result column="message_parentID" property="messageParentID" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        message_id, message_nickname, message_email, message_content, message_headPortrait, message_createTime, message_parentID
+    </sql>
+
+</mapper>

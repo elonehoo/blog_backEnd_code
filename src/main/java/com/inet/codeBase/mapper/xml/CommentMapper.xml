@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.codeBase.mapper.CommentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.inet.codeBase.beans.Comment">
+        <id column="comment_id" property="commentId" />
+        <result column="comment_nickname" property="commentNickname" />
+        <result column="comment_email" property="commentEmail" />
+        <result column="comment_headPortrait" property="commentHeadPortrait" />
+        <result column="comment_content" property="commentContent" />
+        <result column="comment_creationTime" property="commentCreationTime" />
+        <result column="blog_id" property="blogId" />
+        <result column="parent_comment_id" property="parentCommentId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        comment_id, comment_nickname, comment_email, comment_headPortrait, comment_content, comment_creationTime, blog_id, parent_comment_id
+    </sql>
+
+</mapper>
